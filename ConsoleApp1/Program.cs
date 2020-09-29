@@ -13,7 +13,7 @@ namespace ConsoleApp1
         static string WriteStars(int cislo)
         {
             string vysledek = "";
-            for (int i = cislo; i >0; i = i-1)
+            for (int i = cislo; i > 0; i = i - 1)
             {
                 vysledek += "*";
             }
@@ -29,13 +29,16 @@ namespace ConsoleApp1
                 Console.Write("Zadejte prosím číslo od 3 do 15 včetně: ");
                 string vstup = Console.ReadLine();
                 zkouska = Int32.TryParse(vstup, out cislo);
-                if (zkouska == true)
-                {
-                    break;
-                }
             }
-            while ((true) && (cislo > 3) && (cislo < 16));
-            Console.WriteLine("Hello World!");
+            while ((true) || (cislo < 3) || (cislo < 16));
+
+            double umocneno = PowerOfTwo(cislo);
+            Console.WriteLine("Vaše čislo na druhou mocninu je: " + cislo);
+            string hvezdicky = WriteStars(cislo);
+            Console.WriteLine("Váš string pro zadané číslo vypadá takto:" + hvezdicky);
+
         }
+
+
     }
 }
