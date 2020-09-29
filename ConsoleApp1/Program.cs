@@ -28,9 +28,13 @@ namespace ConsoleApp1
             {
                 Console.Write("Zadejte prosím číslo od 3 do 15 včetně: ");
                 string vstup = Console.ReadLine();
-                zkouska = Int32.TryParse(vstup, out cislo);                
+                zkouska = Int32.TryParse(vstup, out cislo);
+                if (zkouska == true)
+                {
+                    break;
+                }
             }
-            while ((zkouska) && (cislo > 3) && (cislo < 16));
+            while ((true) && (cislo > 3) && (cislo < 16));
             Console.WriteLine("Hello World!");
         }
     }
