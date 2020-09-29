@@ -1,0 +1,2 @@
+# miniTest
+Zkouska GitHubu
